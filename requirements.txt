@@ -78,5 +78,5 @@ wcwidth==0.1.7
 webencodings==0.5.1
 widgetsnbextension==3.3.1
 wrapt==1.10.11
-pillow
+PIL
 io
