@@ -1,0 +1,12 @@
+<h1> {{name}} </h1>
+<ul>
+  <li>Tipo : {{type}}</li>
+  <li>Dimension : {{ dimension }}</li>
+  <li>Residents :</li>
+  {%for i in residents%}
+    <tbody>
+      {{ i }}
+      <br>
+    </tbody>
+  {%endfor%}
+</ul>

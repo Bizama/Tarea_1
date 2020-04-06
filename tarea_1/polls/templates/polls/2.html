@@ -1,0 +1,12 @@
+<h1> Episodios</h1>
+<ul>
+  {% for resultado in results %}
+  <li>Nombre : <a href='episodes'>{{ resultado.name }}</a></li>
+  <li>Fecha : {{ resultado.air_date }}</li>
+  <li>Episodio : {{ resultado.episode }}</li>
+  <br>
+  {% endfor %}
+
+<a href='1'>Back</a>
+
+</ul>

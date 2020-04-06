@@ -1,0 +1,10 @@
+<h1> {{name}} </h1>
+<ul>
+  <li>Fecha : {{air_date}}</li>
+  <li>Episodio : {{ episode }}</li>
+  <li>Personajes:</li>
+  {% for key, value in phone_book.items %}
+  <li><a href="{% url 'polls:characters' key %}">{{value}}</a></li>
+  <br>
+  {% endfor %}
+</ul>
