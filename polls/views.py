@@ -7,7 +7,7 @@ from io import StringIO
 
 
 def index(request):
-    r = requests.get('https://rickandmortyapi.com/api/episode/')
+    r = requests.get('https://integracion-rick-morty-api.herokuapp.com/api/episode/')
     r = r.json()
     context = {
         'results': r['results'],
@@ -18,7 +18,7 @@ def index(request):
     return render(request, 'polls/index.html', context)
 
 def index_2(request):
-    r = requests.get('https://rickandmortyapi.com/api/episode?page=2')
+    r = requests.get('https://integracion-rick-morty-api.herokuapp.com/api/episode?page=2')
     r = r.json()
     context = {
         'results': r['results'],
@@ -30,7 +30,7 @@ def index_2(request):
 
 
 def characters(request, id):
-    url = 'https://rickandmortyapi.com/api/character/{}'.format(id)
+    url = 'https://integracion-rick-morty-api.herokuapp.com/api/character/{}'.format(id)
     r = requests.get(url)
     r = r.json()
     origin = r['origin']['name']
@@ -64,7 +64,7 @@ def characters(request, id):
 
 
 def locations(request, id):
-    url = 'https://rickandmortyapi.com/api/location/{}'.format(id)
+    url = 'https://integracion-rick-morty-api.herokuapp.com/api/location/{}'.format(id)
     data = requests.get(url)
     data = data.json()
     names = data['residents']
@@ -86,7 +86,7 @@ def locations(request, id):
 
 
 def episodes(request, id):
-    url = 'https://rickandmortyapi.com/api/episode/{}'.format(id)
+    url = 'https://integracion-rick-morty-api.herokuapp.com/api/episode/{}'.format(id)
     r = requests.get(url)
     r = r.json()
     nombres = []
