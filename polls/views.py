@@ -2,17 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 import requests
+from PIL import Image
+from io import StringIO
 
-'''
-def index(request):
-    r = requests.get('https://rickandmortyapi.com/api/')
-    r = r.json()
-    context = {'personajes': r['characters'],
-                'ubicacion': r['locations'],
-                'episodios': r['episodes'],
-                }
-    return render(request, 'polls/index.html', context)
-'''
+
 def index(request):
     r = requests.get('https://rickandmortyapi.com/api/episode/')
     r = r.json()
@@ -52,6 +45,7 @@ def characters(request, id):
         nombre = res['name']
         episodios.append(nombre)
 
+    imagen = r['image']
     context = {
         'name': r['name'],
         'status': r['status'],
@@ -62,7 +56,8 @@ def characters(request, id):
         'location': location,
         'episode': episodios,
         'id_location': location_url,
-        'id_origin': origin_url
+        'id_origin': origin_url,
+        'image': imagen,
     }
 
     return render(request, 'polls/characters.html', context)

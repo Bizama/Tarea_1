@@ -6,7 +6,6 @@
   <li>Genero : {{ gender }}</li>
   <li>Origen : <a href="{% url 'polls:locations' id_origin %}">{{ origin }}</a></li>
   <li>Ubicación : <a href="{% url 'polls:locations' id_location %}">{{ location }}</a></li>
-  <li>Imagen : -</li>
   <li>Episodios :</li>
   {%for i in episode%}
     <tbody>
@@ -14,5 +13,6 @@
       <br>
     </tbody>
   {%endfor%}
+ <img src={{image}}>
 
 </ul>
