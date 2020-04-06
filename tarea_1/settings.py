@@ -25,7 +25,7 @@ SECRET_KEY = 'k6)w!#mwx!82_hu*3xa2k)9o$+am(7+eda#n47mw_(f3w1msq('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [tallerintegraciontarea1.heroku.com]
 
 
 # Application definition
